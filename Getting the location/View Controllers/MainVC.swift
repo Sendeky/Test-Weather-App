@@ -27,7 +27,6 @@ class MainVC: UIViewController {
     
 
     @IBOutlet weak var uvIndexLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var tempLabelMin: UILabel!
