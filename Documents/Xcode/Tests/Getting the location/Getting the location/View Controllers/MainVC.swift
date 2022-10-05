@@ -26,7 +26,7 @@ struct WeatherData {
 
 class MainVC: UIViewController {
     
-    
+    //Links all the buttons, labels, etc.
     @IBOutlet weak var uvIndexLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
