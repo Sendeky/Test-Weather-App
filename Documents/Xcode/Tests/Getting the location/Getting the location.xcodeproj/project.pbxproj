@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C00EB8442857CA9A00D1D370 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00EB8432857CA9A00D1D370 /* MainVC.swift */; };
 		C00EB8472857DEF400D1D370 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C00EB8462857DEF400D1D370 /* SwiftyJSON */; };
+		C0A60C6D28EC741800C2B55A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A60C6C28EC741800C2B55A /* Constants.swift */; };
 		C0E32EAC284D606C00A6585A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E32EAB284D606C00A6585A /* AppDelegate.swift */; };
 		C0E32EAE284D606C00A6585A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E32EAD284D606C00A6585A /* SceneDelegate.swift */; };
 		C0E32EB0284D606C00A6585A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E32EAF284D606C00A6585A /* ViewController.swift */; };
@@ -16,10 +17,12 @@
 		C0E32EB5284D606D00A6585A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E32EB4284D606D00A6585A /* Assets.xcassets */; };
 		C0E32EB8284D606D00A6585A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0E32EB6284D606D00A6585A /* LaunchScreen.storyboard */; };
 		C0E32EC1284D761300A6585A /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E32EC0284D761300A6585A /* MapVC.swift */; };
+		C0F79D2C28E67D5700E8498E /* Date+UVIndexCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F79D2B28E67D5700E8498E /* Date+UVIndexCalculate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C00EB8432857CA9A00D1D370 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		C0A60C6C28EC741800C2B55A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C0E32EA8284D606C00A6585A /* Getting the location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Getting the location.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E32EAB284D606C00A6585A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E32EAD284D606C00A6585A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		C0E32EB7284D606D00A6585A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0E32EB9284D606D00A6585A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0E32EC0284D761300A6585A /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		C0F79D2B28E67D5700E8498E /* Date+UVIndexCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+UVIndexCalculate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +50,9 @@
 		C00EB8412857C74500D1D370 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C00EB8432857CA9A00D1D370 /* MainVC.swift */,
 				C0E32EAF284D606C00A6585A /* ViewController.swift */,
 				C0E32EC0284D761300A6585A /* MapVC.swift */,
+				C00EB8432857CA9A00D1D370 /* MainVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -60,6 +64,14 @@
 				C0E32EAD284D606C00A6585A /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C0A60C6B28EC740A00C2B55A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C0A60C6C28EC741800C2B55A /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		C0E32E9F284D606C00A6585A = {
@@ -81,14 +93,24 @@
 		C0E32EAA284D606C00A6585A /* Getting the location */ = {
 			isa = PBXGroup;
 			children = (
-				C00EB8422857C75600D1D370 /* Delegates */,
+				C0A60C6B28EC740A00C2B55A /* Constants */,
+				C0F79D2A28E67D2E00E8498E /* Date + UV Index */,
 				C00EB8412857C74500D1D370 /* View Controllers */,
-				C0E32EB1284D606C00A6585A /* Main.storyboard */,
 				C0E32EB4284D606D00A6585A /* Assets.xcassets */,
-				C0E32EB6284D606D00A6585A /* LaunchScreen.storyboard */,
 				C0E32EB9284D606D00A6585A /* Info.plist */,
+				C0E32EB1284D606C00A6585A /* Main.storyboard */,
+				C0E32EB6284D606D00A6585A /* LaunchScreen.storyboard */,
+				C00EB8422857C75600D1D370 /* Delegates */,
 			);
 			path = "Getting the location";
+			sourceTree = "<group>";
+		};
+		C0F79D2A28E67D2E00E8498E /* Date + UV Index */ = {
+			isa = PBXGroup;
+			children = (
+				C0F79D2B28E67D5700E8498E /* Date+UVIndexCalculate.swift */,
+			);
+			path = "Date + UV Index";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +191,9 @@
 			files = (
 				C0E32EB0284D606C00A6585A /* ViewController.swift in Sources */,
 				C00EB8442857CA9A00D1D370 /* MainVC.swift in Sources */,
+				C0F79D2C28E67D5700E8498E /* Date+UVIndexCalculate.swift in Sources */,
 				C0E32EC1284D761300A6585A /* MapVC.swift in Sources */,
+				C0A60C6D28EC741800C2B55A /* Constants.swift in Sources */,
 				C0E32EAC284D606C00A6585A /* AppDelegate.swift in Sources */,
 				C0E32EAE284D606C00A6585A /* SceneDelegate.swift in Sources */,
 			);

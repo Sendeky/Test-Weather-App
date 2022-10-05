@@ -47,7 +47,9 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             mapView.showsUserLocation = true
         }
     }
+    
     @IBAction func yesButtonClicked() {
         performSegue(withIdentifier: "toMainVC", sender: nil)
+        UserDefaults.standard.set(true, forKey: "Key")
     }
 }
