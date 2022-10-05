@@ -14,7 +14,7 @@ var globalUserLongitude = 0.0
 var localDateArray = [String]()
 var sortedArray = [String]()
 
-
+//Struct used for all of the data that JSON from the api call returns
 struct WeatherData {
     static var weatherTemp = ""
     static var weatherFeelsLike = ""
