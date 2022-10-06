@@ -152,16 +152,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ayS-KA-viM">
-                                <rect key="frame" x="55.999999999999993" y="236.99999999999997" width="73.333333333333314" height="40.666666666666657"/>
+                                <rect key="frame" x="56" y="237.00000000000003" width="80" height="81.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV Index:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQo-9p-fSs">
-                                        <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K87-Cq-0IO" userLabel="Feels Like">
-                                        <rect key="frame" x="0.0" y="20.333333333333314" width="73.333333333333329" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels Like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K87-Cq-0IO" userLabel="Feels Like">
+                                        <rect key="frame" x="0.0" y="20.333333333333314" width="80" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunrise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwg-fn-IWy">
+                                        <rect key="frame" x="0.0" y="40.666666666666686" width="80" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU8-Mx-aY0">
+                                        <rect key="frame" x="0.0" y="61.000000000000007" width="80" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -196,10 +208,12 @@
                         <outlet property="feelsLikeLabel" destination="K87-Cq-0IO" id="Rr0-ib-yMU"/>
                         <outlet property="imageView" destination="zwL-lU-b54" id="jxo-Uf-dfx"/>
                         <outlet property="locationLabel" destination="2M3-wy-FX3" id="ThZ-ts-6kN"/>
+                        <outlet property="sunriseLabel" destination="mwg-fn-IWy" id="qfI-bT-QWe"/>
+                        <outlet property="sunsetLabel" destination="vU8-Mx-aY0" id="7Dh-tf-AK4"/>
                         <outlet property="tempLabel" destination="Xr5-cH-hoz" id="USp-dt-ZdL"/>
                         <outlet property="tempLabelMax" destination="F78-Df-QEk" id="Ak3-V8-Eue"/>
                         <outlet property="tempLabelMin" destination="6DI-1G-qIj" id="iTb-xG-xfI"/>
-                        <outlet property="uvIndexLabel" destination="eQo-9p-fSs" id="Zsa-QE-PnK"/>
+                        <outlet property="uvIndexLabel" destination="eQo-9p-fSs" id="3JN-O9-rGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xF-CA-zMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

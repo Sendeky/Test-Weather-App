@@ -22,6 +22,10 @@ struct WeatherData {
     static var weatherTempMax = ""
     static var weatherDesc = ""
     static var cityName = ""
+    static var sunriseResult = Double()
+    static var sunsetResult = Double()
+    static var localSunrise = ""
+    static var localSunset = ""
 }
 
 class MainVC: UIViewController {
@@ -35,6 +39,9 @@ class MainVC: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var InfoStackView: UIStackView!
     @IBOutlet weak var feelsLikeLabel: UILabel!
+    @IBOutlet weak var sunriseLabel: UILabel!
+    @IBOutlet weak var sunsetLabel: UILabel!
+    
     
 
     let shape = CAShapeLayer()
@@ -68,6 +75,7 @@ class MainVC: UIViewController {
         let UVIndexCalculate = DateUVIndexCalculate()       //Creates instance of DateUVIndexCalculae so that we can call the fucntion inside of it
         UVIndexCalculate.calculateUVIndex()                 //Calls the calculateUVIndex function
         
+        
         //Calls the function to animate the UV Index
         animateUVIndex()
         
@@ -90,6 +98,12 @@ class MainVC: UIViewController {
                     WeatherData.weatherTempMax = result["main"]["temp_max"].stringValue
                     WeatherData.weatherDesc = result["weather"][0]["description"].stringValue
                     WeatherData.cityName = result["name"].stringValue
+                    WeatherData.sunriseResult = result["sys"]["sunrise"].doubleValue
+                    WeatherData.sunsetResult = result["sys"]["sunset"].doubleValue
+                    
+                    //Calls the Converted function so that we can then use the sunset & sunrise times
+                    let DateConverter = DateConverter()
+                    DateConverter.convertEpochToDate()
                     
                     
                     let weatherTempDouble = Double(WeatherData.weatherTemp)
@@ -107,10 +121,12 @@ class MainVC: UIViewController {
                     //Runs on main thread so that the UI updates
                     DispatchQueue.main.async {
                         self.tempLabel.text = "\(Int(weatherTempCelsius))˚"
-                        self.feelsLikeLabel.text = "Feels like: \(Int(weatherFeelsLikeCelsius))˚"
                         self.tempLabelMin.text = "\(Int(weatherTempMinCelsius))˚"
                         self.tempLabelMax.text = "\(Int(weatherTempMaxCelsius))˚"
                         self.locationLabel.text = "\(WeatherData.cityName)"
+                        self.feelsLikeLabel.text = "Feels like: \(Int(weatherFeelsLikeCelsius))˚"
+                        self.sunriseLabel.text = "Sunrise: \(WeatherData.localSunrise)"
+                        self.sunsetLabel.text = "Sunset: \(WeatherData.localSunset)"
                         
                         
                         // TODO: - parameters for weather icons by temperature
